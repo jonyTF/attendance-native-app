@@ -1,18 +1,18 @@
-import React from 'react';
+/*import React from 'react';
 import { Platform } from 'react-native';
 import { createStackNavigator, createBottomTabNavigator } from 'react-navigation';
 
 import TabBarIcon from '../components/TabBarIcon';
-import HomeScreen from '../screens/HomeScreen';
+import InitScreen from '../screens/InitScreen';
 import JoinScreen from '../screens/JoinScreen';
 import SettingsScreen from '../screens/SettingsScreen';
 
-const HomeStack = createStackNavigator({
-  Home: HomeScreen,
+const InitStack = createStackNavigator({
+  Init: InitScreen,
 });
 
-HomeStack.navigationOptions = {
-  tabBarLabel: 'Home',
+InitStack.navigationOptions = {
+  tabBarLabel: 'Start',
   tabBarIcon: ({ focused }) => (
     <TabBarIcon
       focused={focused}
@@ -54,7 +54,8 @@ SettingsStack.navigationOptions = {
 };
 
 export default createBottomTabNavigator({
-  HomeStack,
+  InitStack,
   JoinStack,
   SettingsStack,
 });
+*/

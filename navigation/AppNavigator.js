@@ -1,10 +1,21 @@
 import React from 'react';
-import { createSwitchNavigator } from 'react-navigation';
+import { createAppContainer, createStackNavigator, createSwitchNavigator } from 'react-navigation';
 
-import MainTabNavigator from './MainTabNavigator';
+import AuthLoadingScreen from '../screens/AuthLoadingScreen';
+import InitScreen from '../screens/InitScreen';
+import JoinScreen from '../screens/JoinScreen';
 
-export default createSwitchNavigator({
-  // You could add another route here for authentication.
-  // Read more at https://reactnavigation.org/docs/en/auth-flow.html
-  Main: MainTabNavigator,
-});
+const AppStack = createStackNavigator({ Join: JoinScreen });
+const AuthStack = createStackNavigator({ Init: InitScreen });
+
+// https://reactnavigation.org/docs/en/auth-flow.html
+export default createAppContainer(createSwitchNavigator(
+  {
+    AuthLoading: AuthLoadingScreen,
+    App: AppStack,
+    Auth: AuthStack,
+  },
+  {
+    initialRouteName: 'AuthLoading',
+  }
+));

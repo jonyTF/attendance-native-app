@@ -6,7 +6,6 @@ import {
   TextInput,
   KeyboardAvoidingView,
 } from 'react-native';
-import { TextField } from 'react-native-material-textfield';
 
 class JoinScreen extends Component {
   static navigationOptions = {
